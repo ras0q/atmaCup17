@@ -4,11 +4,7 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = [
-    "pandas>=2.2.2",
-    "lightning>=2.4.0",
-    "scikit-learn>=1.5.1",
-]
+dependencies = ["pandas>=2.2.2", "lightning>=2.4.0", "scikit-learn>=1.5.1"]
 
 [tool.uv]
 dev-dependencies = [
@@ -16,4 +12,10 @@ dev-dependencies = [
     "ruff>=0.6.3",
     "mypy>=1.11.2",
     "wandb>=0.17.8",
+]
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "D", # pydocstyle
 ]
